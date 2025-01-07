@@ -252,53 +252,63 @@ footer {
     color: #5a3f2d;
     margin-top: auto;
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     /* Header */
     header {
-        font-size: 1.8em; /* Ukuran font yang cukup besar tetapi tetap proporsional */
-        text-align: center; /* Memusatkan teks header untuk estetika */
-        padding: 10px 0; /* Memberikan jarak atas dan bawah */
+        font-size: 2em; /* Ukuran font yang lebih besar seperti di desktop */
+        text-align: left; /* Menjaga agar header berada di kiri */
+        padding: 20px 0; /* Memberikan jarak yang cukup pada header */
     }
 
     /* Gambar Kenangan */
+    .kenangan-gallery {
+        display: grid; /* Menggunakan grid untuk galeri */
+        grid-template-columns: repeat(3, 1fr); /* Membagi gambar menjadi 3 kolom, seperti desktop */
+        gap: 20px; /* Jarak antar gambar */
+        max-width: 1000px; /* Membatasi lebar galeri */
+        margin: 0 auto; /* Memusatkan galeri */
+    }
+
     .kenangan-gallery img {
-        max-width: 100%; /* Memastikan gambar menggunakan seluruh lebar yang tersedia */
-        height: auto; /* Mempertahankan rasio aspek gambar */
-        margin-bottom: 10px; /* Memberikan jarak antar gambar */
+        width: 100%; /* Memastikan gambar mengisi lebar kolom */
+        height: auto; /* Mempertahankan rasio gambar */
     }
 
     /* Tombol Gallery */
     .gallery-btn {
-        font-size: 1em; /* Ukuran font tombol yang lebih proporsional */
-        padding: 10px 20px; /* Padding yang lebih kecil agar tombol tidak terlalu besar */
-        display: block; /* Membuat tombol memenuhi lebar kontainer */
-        width: 100%; /* Tombol melebar sepenuhnya */
-        text-align: center; /* Teks tombol tetap berada di tengah */
+        font-size: 1.2em; /* Ukuran font tombol seperti desktop */
+        padding: 12px 25px; /* Padding tombol seperti di desktop */
+        display: inline-block;
+        width: auto; /* Menjaga ukuran tombol agar tetap sesuai */
+        text-align: center; /* Teks tombol tetap di tengah */
+        margin: 20px 0; /* Memberikan jarak vertikal */
     }
 
     /* Modal */
     .modal-content {
-        width: 90%;
-        margin: 0 auto; /* Memusatkan modal di layar */
-        padding: 15px; /* Memberikan jarak dalam modal */
-        border-radius: 8px; /* Sudut yang lebih lembut untuk estetika */
+        width: 90%; /* Memastikan modal tetap proporsional */
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 8px;
     }
 
     /* Slideshow */
     .slideshow-container {
-        width: 100%; /* Pastikan slideshow mengambil lebar penuh */
-        overflow: hidden; /* Menyembunyikan gambar yang melampaui kontainer */
+        width: 100%; /* Slideshow mengisi lebar penuh */
+        overflow: hidden;
+        position: relative;
     }
 
     .slideshow-images {
         display: flex;
-        transition: transform 0.5s ease-in-out; /* Animasi halus saat bergeser */
-        width: 100%; /* Pastikan gambar mengambil lebar penuh */
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
     }
 
     .slideshow-images img {
-        width: 100%; /* Membuat gambar mengisi lebar kontainer */
-        height: auto; /* Mempertahankan rasio gambar */
+        width: 100%; /* Gambar slideshow mengisi lebar penuh */
+        height: auto;
     }
 
     /* Tombol Geser */
@@ -306,54 +316,54 @@ footer {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang semi-transparan */
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
         font-size: 2em;
         padding: 10px;
         border: none;
         cursor: pointer;
-        z-index: 100; /* Memastikan tombol tetap di atas gambar */
+        z-index: 100;
     }
 
     .prev {
-        left: 10px; /* Posisi tombol sebelumnya di kiri */
+        left: 10px;
     }
 
     .next {
-        right: 10px; /* Posisi tombol selanjutnya di kanan */
+        right: 10px;
     }
 
     .prev:hover, .next:hover {
-        background-color: rgba(0, 0, 0, 0.7); /* Efek hover untuk tombol */
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
     /* Gambar Siswa */
     .student-images {
         max-width: 100%; /* Membuat gambar siswa responsif */
-        height: auto; /* Mempertahankan rasio aspek */
-        margin-bottom: 20px; /* Jarak antar gambar */
+        height: auto;
+        margin-bottom: 20px;
     }
 }
 
 @media (min-width: 1024px) {
     /* Header */
     header {
-        font-size: 2em;
-        text-align: left; /* Memastikan header berada di kiri untuk layar besar */
+        font-size: 2em; /* Ukuran font tetap 2em untuk layar besar */
+        text-align: left;
     }
 
     /* Gambar Kenangan */
     .kenangan-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Galeri tetap dengan 3 kolom */
+        gap: 20px;
         max-width: 1000px;
-        margin: 0 auto; /* Memusatkan galeri */
-        display: grid; /* Menggunakan grid untuk tata letak gambar */
-        grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk galeri */
-        gap: 20px; /* Jarak antar gambar di galeri */
+        margin: 0 auto;
     }
 
     .kenangan-gallery img {
-        width: 100%; /* Membuat gambar mengisi lebar kolom */
-        height: auto; /* Mempertahankan rasio gambar */
+        width: 100%;
+        height: auto;
     }
 
     /* Tombol Gallery */
@@ -363,11 +373,19 @@ footer {
         display: inline-block;
     }
 
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
     /* Slideshow */
     .slideshow-container {
         width: 100%;
         max-width: 1200px;
-        margin: 0 auto; /* Memusatkan slideshow di layar besar */
+        margin: 0 auto;
     }
 
     .slideshow-images {
@@ -404,15 +422,16 @@ footer {
     }
 
     .prev:hover, .next:hover {
-        background-color: rgba(0, 0, 0, 0.7); /* Efek hover pada tombol */
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
     /* Gambar Siswa */
     .student-images {
         max-width: 900px;
-        margin: 0 auto; /* Memusatkan gambar siswa */
+        margin: 0 auto;
     }
 }
+
 
 </style>
 
